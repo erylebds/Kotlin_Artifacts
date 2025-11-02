@@ -1,39 +1,54 @@
-fun docCats() {
-    println("Generating Cat API Docs... Complete")
-}
+class CodeMisc {
 
-fun designDogs() {
-    println("Designing Dog Tracker UI with Material layout")
-}
+    // Cats: documentation generation
+    fun docCats(): String {
+        return "Generating Cat API Docs... Complete"
+    }
 
-fun automateCafe() {
-    println("Running Café CI/CD automation...")
-    println("Done Build, Test, Deploy")
-}
+    // Dogs: UI design
+    fun designDogs(): String {
+        return "Designing Dog Tracker UI with Material layout"
+    }
 
-fun manageWeightliftingProject() {
-    val milestones = listOf("Start", "PR Goal", "Maintenance")
-    milestones.forEachIndexed { i, m -> println("Phase ${i + 1}: $m") }
-}
+    // Café: CI/CD automation
+    fun automateCafe(): String {
+        val logs = listOf(
+            "Running Café CI/CD automation...",
+            "Done Build, Test, Deploy"
+        )
+        return logs.joinToString("\n")
+    }
 
-fun ciFinances() {
-    println("Running Financial Report Build Pipeline... done")
-}
+    // Weightlifting: project management
+    fun manageWeightliftingProject(): String {
+        val milestones = listOf("Start", "PR Goal", "Maintenance")
+        return milestones.mapIndexed { i, m -> "Phase ${i + 1}: $m" }
+            .joinToString("\n")
+    }
 
-fun generatePeppaDocs() {
-    println("Exporting Peppa Pig episode documentation")
-}
+    // Finances: CI pipeline for reporting
+    fun ciFinances(): String {
+        return "Running Financial Report Build Pipeline... done"
+    }
 
-fun designShoesUI() {
-    println("Creating responsive Shoe Shop layout prototype")
+    // Peppa Pig: documentation export
+    fun generatePeppaDocs(): String {
+        return "Exporting Peppa Pig episode documentation"
+    }
+
+    // Shoes: UI prototyping
+    fun designShoesUI(): String {
+        return "Creating responsive Shoe Shop layout prototype"
+    }
 }
 
 fun main() {
-    docCats()
-    designDogs()
-    automateCafe()
-    manageWeightliftingProject()
-    ciFinances()
-    generatePeppaDocs()
-    designShoesUI()
+    val misc = CodeMisc()
+    println(misc.docCats())
+    println(misc.designDogs())
+    println(misc.automateCafe())
+    println(misc.manageWeightliftingProject())
+    println(misc.ciFinances())
+    println(misc.generatePeppaDocs())
+    println(misc.designShoesUI())
 }
